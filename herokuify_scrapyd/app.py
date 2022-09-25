@@ -10,11 +10,11 @@ from twisted.web.guard import HTTPAuthSessionWrapper, BasicCredentialFactory
 
 from scrapy.utils.misc import load_object
 
-from .interfaces import IEggStorage, IJobStorage, IPoller, ISpiderScheduler, IEnvironment
-from .scheduler import SpiderScheduler
-from .poller import QueuePoller
-from .environ import Environment
-from .basicauth import PublicHTMLRealm, StringCredentialsChecker
+from scrapyd.interfaces import IEggStorage, IJobStorage, IPoller, ISpiderScheduler, IEnvironment
+from scrapyd.scheduler import SpiderScheduler
+from scrapyd.poller import QueuePoller
+from scrapyd.environ import Environment
+from scrapyd.basicauth import PublicHTMLRealm, StringCredentialsChecker
 import os
 
 def create_wrapped_resource(webcls, config, app):
