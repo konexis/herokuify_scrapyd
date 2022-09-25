@@ -38,6 +38,7 @@ def create_wrapped_resource(webcls, config, app):
 def application(config):
     app = Application("Scrapyd")
     http_port = config.getint('http_port', 6800)
+    
     if 'PORT' in os.environ:
         http_port = int(os.environ.get('PORT'))
 
