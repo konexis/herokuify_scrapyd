@@ -1,7 +1,5 @@
 import setuptools
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
 
 setuptools.setup(
     name="herokuify_scrapyd",
@@ -9,7 +7,6 @@ setuptools.setup(
     author="Ahmed Rafik Djerah",
     author_email="djerahahmedrafik@mail.com",
     description="A package to deploy scrapy spiders to Heroku",
-    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/pypa/sampleproject",
     install_requires=[
