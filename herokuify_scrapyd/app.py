@@ -15,7 +15,7 @@ from .scheduler import SpiderScheduler
 from .poller import QueuePoller
 from .environ import Environment
 from .basicauth import PublicHTMLRealm, StringCredentialsChecker
-
+import os
 
 def create_wrapped_resource(webcls, config, app):
     username = config.get('username', '')
@@ -42,8 +42,7 @@ def application(config):
         http_port = int(os.environ.get('PORT'))
 
     bind_address = '0.0.0.0' if 'PORT' in os.environ else config.get('bind_address', '127.0.0.1')
-    
-    
+
     poll_interval = config.getfloat('poll_interval', 5)
 
     poller = QueuePoller(config)
